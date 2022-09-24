@@ -35,5 +35,28 @@ public class ArraysTaskList {
 			System.out.println();
 		}
 	}
+	
+	public static void printArrays(int arr[]) {
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i] + " ");
+		}
+		System.out.println();
+	}
+
+	public int primeNumber(int arr[]) {
+		int i = 0;
+		for (i = 1; i < arr.length; i++) {
+			boolean isPrime = true;
+			for (int j = 2; j < i; j++) {
+				if (i % j == 0) {
+					isPrime = false;
+					break;
+				}
+			}
+			if (isPrime)
+				System.out.print(i + " ,");
+		}
+		return i;
+	}
 
 }
